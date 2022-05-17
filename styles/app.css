@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
 }
-
+/* Variables globales */
 :root {
     --white: #F9F7F7;
     --blue-ligth: #DBE2EF;
@@ -18,14 +18,14 @@ body{
     background-color: var(--white);
     font-family: 'Barlow Condensed', sans-serif;
 }
-
+/* Titulo general */
 .title{
     margin-top: 40px;
     margin-left: 20px;
     color:var(--blue);
     font-size: 3.2rem;
 }
-
+/* Estilos para el search */
 .container-search{
     display: flex;
     flex-direction: row;
@@ -34,7 +34,7 @@ body{
     margin: 20px auto auto 20px;
 }
 .input-search{
-    border: none;
+    width: 100%;
     border-radius: 8px 0 0 8px;
     background-color: var(--blue-ligth);
     padding-left: 10px;
@@ -52,4 +52,100 @@ span .gg-search{
 }
 span .gg-search:active{
     transform: translateY(-2px);
+}
+/* Tendencias */
+.conatiner-trends{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.subtitle{
+    color:var(--blue);
+    font-size: 2.3rem;
+}
+.button-seemore{
+    width: 80px;
+    height: 30px;
+    border-radius: 8px ;
+    outline: none;
+    border: none;
+    color: var(--white);
+    background-color: var(--blue);
+    margin-left: calc(20%);
+    cursor: pointer;
+}
+.button-seemore:active{
+    transform: translateY(-2px);
+}
+.container-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto 20px 20px;
+}
+.container-carrousel{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 241px;
+    padding-left: 20px;
+    padding-bottom: 16px;
+}
+.container-img{
+    width: 150px;
+    height: 225px;
+    display: inline-block;
+    margin-right: 10px;
+    box-shadow: 1px 4px 10px rgba(202, 197, 197, 0.6);
+    border-radius: 8px;
+}
+.images{
+    width: 150px;
+    height: 225px;
+    border-radius: 8px;
+}
+/* Categorias */
+.container-categories{
+    margin: 20px 0 20px 20px;
+}
+.container-subcategories{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.container-subcategories--name{
+    width: 45%;
+    height: 40px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+.color{
+    width: 30px;
+    height: 30px;
+    background-color: #8EA2EA;
+    border-radius: 8px;
+}
+.name-categories{
+    font-size: 1.6rem;
+    margin-left: 10px;
+    color: var(--blue);
+}
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    height: 48px;
+    width: 100%;
+    background-color: var(--blue-dark);
+    color: var(--white);
+    text-align: center;
+    font-size: 1.4rem;
 }
