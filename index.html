@@ -12,16 +12,19 @@
     <link href='https://css.gg/search.css' rel='stylesheet'>
 </head>
 <body>
-    <h1 class="title">MoviesApp</h1>
-    <section class="container-search">
-        <input class="input-search" type="text" placeholder="Busca una pelicula">
-        <button class="button-search">
-            <span class="span-search">
-                <i class="gg-search"></i>
-            </span>
-        </button>
-    </section>
-    <section class="conatiner-trends">
+    <header class="header-container--long ">
+        <h1 class="title inactive">MoviesApp</h1>
+        <section class="container-search inactive">
+            <input class="input-search" type="text" placeholder="Busca una pelicula">
+            <button class="button-search">
+                <span class="span-search">
+                    <i class="gg-search"></i>
+                </span>
+            </button>
+        </section>
+
+    </header>
+    <section class="conatiner-trends inactive">
 
         <div class="container-header">
             <h2 class="subtitle">Tendencias</h2>
@@ -50,7 +53,7 @@
             </figure>
         </article>
     </section>
-    <section class="container-categories">
+    <section class="container-categories inactive">
         <h2 class="subtitle">Categorías</h2>
         <article class="container-subcategories">
 
@@ -76,7 +79,59 @@
             
         </article>
     </section>
-    <footer class="footer">Hecho con 💜 por @DEDV</footer>
+
+    <section class="movieDetail-container">
+        <h1 class="movieDetail-title">Avengers</h1>
+        <span class="movieDetail-score">9.2</span>
+        <p class="movieDetail-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur deleniti vitae similique magni maiores velit molestiae est ad! In similique nostrum perspiciatis itaque repellat quos numquam odio, eum impedit voluptates?</p>
+        <article class="container-subcategories">
+            <div class="container-subcategories--name">
+                <div class="color"></div>
+                <h3 class="name-categories">Acción</h3>
+            </div>
+            
+            <div class="container-subcategories--name">
+                <div class="color"></div>
+                <h3 class="name-categories">Acción</h3>
+            </div>
+            
+            <div class="container-subcategories--name">
+                <div class="color"></div>
+                <h3 class="name-categories">Acción</h3>
+            </div>
+            
+            <div class="container-subcategories--name">
+                <div class="color"></div>
+                <h3 class="name-categories">Acción</h3>
+            </div>
+        </article>
+        <article class="movieDetail-container--similar">
+            <h2 class="movieDetail-subtitle-similar">Peliculas similares</h2>
+            <article class="container-carrousel">
+                <figure class="container-img">
+                    <img class="images" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vThe85YlGE5r7fqEVFePETqnWzk.jpg" alt="Poster de pelicula">
+                </figure>
+    
+                <figure class="container-img">
+                    <img class="images" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vThe85YlGE5r7fqEVFePETqnWzk.jpg" alt="Poster de pelicula">
+                </figure>
+    
+                <figure class="container-img">
+                    <img class="images" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vThe85YlGE5r7fqEVFePETqnWzk.jpg" alt="Poster de pelicula">
+                </figure>
+    
+                <figure class="container-img">
+                    <img class="images" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vThe85YlGE5r7fqEVFePETqnWzk.jpg" alt="Poster de pelicula">
+                </figure>
+    
+                <figure class="container-img">
+                    <img class="images" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vThe85YlGE5r7fqEVFePETqnWzk.jpg" alt="Poster de pelicula">
+                </figure>
+            </article>
+        </article>
+    </section>
+
+    <footer class="footer inactive">Hecho con 💜 por @DEDV</footer>
     <script type="module" src="./src/main.js"></script>
 </body>
 </html>

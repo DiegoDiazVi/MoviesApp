@@ -18,12 +18,24 @@ body{
     background-color: var(--white);
     font-family: 'Barlow Condensed', sans-serif;
 }
+.header-container--long{
+    background-image: url('https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ksBQ4oHQDdJwND8H90ay8CbMihU.jpg');
+    height: 580px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+}
 /* Titulo general */
+.title, .movieDetail-title{
+    color:var(--blue);
+    font-size: 3.2rem;
+}
+/* titulos  */
 .title{
     margin-top: 40px;
     margin-left: 20px;
-    color:var(--blue);
-    font-size: 3.2rem;
 }
 /* Estilos para el search */
 .container-search{
@@ -103,7 +115,7 @@ span .gg-search:active{
 .images{
     width: 150px;
     height: 225px;
-    border-radius: 8px;
+    border-radius: 8pxs;
 }
 /* Categorias */
 .container-categories{
@@ -135,6 +147,15 @@ span .gg-search:active{
     margin-left: 10px;
     color: var(--blue);
 }
+/* Detalle de peliculas */
+.movieDetail-container{
+    border-radius: 16px 16px 0 0;
+    margin-top: 500px;
+    padding: 20px 0 0 20px;
+    z-index: 1;
+    position: sticky;
+    background-color: var(--white);
+}
 /* Footer */
 .footer {
     display: flex;
@@ -148,4 +169,8 @@ span .gg-search:active{
     color: var(--white);
     text-align: center;
     font-size: 1.4rem;
+}
+/* Navigation */
+.inactive {
+    display: none;
 }
