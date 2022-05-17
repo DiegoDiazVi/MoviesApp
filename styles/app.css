@@ -156,6 +156,19 @@ span .gg-search:active{
     position: sticky;
     background-color: var(--white);
 }
+.movieDetetail-container-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+
+}
+.movieDetail-score{
+    font-size: 1.8rem;
+    color: var(--blue);
+    
+}
 /* Footer */
 .footer {
     display: flex;
