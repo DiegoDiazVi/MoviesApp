@@ -13,17 +13,18 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
 </head>
 <body>
-    <header class="header-container header-container--categories">
+    <!-- header-container--categories -->
+    <header class="header-container">
         <section class="header-container--movieDetail inactive">
             <div class="header-container--long"></div>
         </section>
-        <span class="header-return">
+        <span class="header-return inactive">
             <i class="fa fa-arrow-left"></i>
         </span>
-        <section class="header-container--title inactive">
+        <section class="header-container--title ">
             <h1 class="title ">MoviesApp</h1>
         </section>
-        <section class="container-search inactive">
+        <section class="container-search">
             <input class="input-search" type="text" placeholder="Busca una pelicula">
             <button class="button-search">
                 <span class="span-search">
@@ -31,13 +32,13 @@
                 </span>
             </button>
         </section>
-        <section class="header-container--category">
+        <section class="header-container--category inactive">
             <div class="color"></div>
             <h3 class="header-container--name">Acción</h3>
         </section>
-
     </header>
-    <section class="conatiner-trends inactive">
+
+    <section id="trendingPreview" class="conatiner-trends ">
 
         <div class="container-header">
             <h2 class="subtitle">Tendencias</h2>
@@ -45,28 +46,14 @@
         </div>
 
         <article class="container-carrousel">
-            <figure class="container-img">
-                <img class="images" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vThe85YlGE5r7fqEVFePETqnWzk.jpg" alt="Poster de pelicula">
-            </figure>
 
-            <figure class="container-img">
+        <!--<figure class="container-img">
                 <img class="images" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vThe85YlGE5r7fqEVFePETqnWzk.jpg" alt="Poster de pelicula">
-            </figure>
-
-            <figure class="container-img">
-                <img class="images" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vThe85YlGE5r7fqEVFePETqnWzk.jpg" alt="Poster de pelicula">
-            </figure>
-
-            <figure class="container-img">
-                <img class="images" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vThe85YlGE5r7fqEVFePETqnWzk.jpg" alt="Poster de pelicula">
-            </figure>
-
-            <figure class="container-img">
-                <img class="images" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vThe85YlGE5r7fqEVFePETqnWzk.jpg" alt="Poster de pelicula">
-            </figure>
+            </figure> -->
+            
         </article>
     </section>
-    <section class="container-categories inactive">
+    <section class="container-categories ">
         <h2 class="subtitle">Categorías</h2>
         <article class="container-subcategories">
 
@@ -158,7 +145,7 @@
         </article>
     </section>
 
-    <section class="movieList-container">
+    <section class="movieList-container inactive">
         <article class="container-list">
             <figure class="container-img--list">
                 <img class="images" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vThe85YlGE5r7fqEVFePETqnWzk.jpg" alt="Poster de pelicula">
