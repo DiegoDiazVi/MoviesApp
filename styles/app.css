@@ -9,6 +9,20 @@
     --blue-ligth: #DBE2EF;
     --blue: #3F72AF;
     --blue-dark: #112D4E;
+    --purple-light-1: #FBFAFB;
+    --purple-light-2: #EEEAF2;
+    --purple-medium-1: #AA83C8;
+    --purple-medium-2: #8B48BF;
+    --purple-medium-3: #5C218A;
+    --purple-dark-1: #3E0F64;
+    --purple-dark-2: #2A0646;
+
+    --yellow: #EECC75;
+    --green: #CAD297;
+    --aqua: #B7EAC5;
+    --lightBlue: #A2EEE5;
+    --darkBlue: #8EA2EA;
+    --red: #F09D9D;
 }
 
 html{
@@ -71,7 +85,7 @@ span .gg-search:active{
     display: flex;
     flex-direction: column;
 }
-.subtitle{
+.subtitle, .movieDetail-subtitle-similar{
     color:var(--blue);
     font-size: 2.3rem;
 }
@@ -115,7 +129,7 @@ span .gg-search:active{
 .images{
     width: 150px;
     height: 225px;
-    border-radius: 8pxs;
+    border-radius: 8px;
 }
 /* Categorias */
 .container-categories{
@@ -127,7 +141,7 @@ span .gg-search:active{
     justify-content: space-between;
     position: relative;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin: 20px 0;
 }
 .container-subcategories--name{
     width: 45%;
@@ -164,10 +178,23 @@ span .gg-search:active{
     width: 80%;
 
 }
+.fa{
+    color: #f0dc58;
+    margin-right: 5px;
+}
 .movieDetail-score{
     font-size: 1.8rem;
+    font-weight: bold;
     color: var(--blue);
-    
+}
+.movieDetail-description{
+    font-size: 1.6rem;
+    font-weight: 200;
+    color: var(--blue);
+    margin: 20px 0;
+}
+.movieDetail-subtitle-similar{
+    margin-bottom: 20px;
 }
 /* Footer */
 .footer {
