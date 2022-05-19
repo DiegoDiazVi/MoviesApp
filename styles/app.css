@@ -41,6 +41,14 @@ body{
     position: fixed;
     top: 0;
 }
+.header-return{
+    color: var(--white);
+    font-size: 4.8rem;
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
 /* Titulo general */
 .title, .movieDetail-title{
     color:var(--blue);
@@ -117,6 +125,7 @@ span .gg-search:active{
     height: 241px;
     padding-left: 20px;
     padding-bottom: 16px;
+    margin-bottom: 20px;
 }
 .container-img{
     width: 150px;
