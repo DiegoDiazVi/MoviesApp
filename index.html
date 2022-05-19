@@ -13,18 +13,27 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
 </head>
 <body>
-    <header >
+    <header class="header-container header-container--categories">
+        <section class="header-container--movieDetail inactive">
+            <div class="header-container--long"></div>
+        </section>
         <span class="header-return">
-            <
+            <i class="fa fa-arrow-left"></i>
         </span>
-        <h1 class="title inactive">MoviesApp</h1>
-        <section class="container-search ">
+        <section class="header-container--title inactive">
+            <h1 class="title ">MoviesApp</h1>
+        </section>
+        <section class="container-search inactive">
             <input class="input-search" type="text" placeholder="Busca una pelicula">
             <button class="button-search">
                 <span class="span-search">
                     <i class="gg-search"></i>
                 </span>
             </button>
+        </section>
+        <section class="header-container--category">
+            <div class="color"></div>
+            <h3 class="header-container--name">Acción</h3>
         </section>
 
     </header>

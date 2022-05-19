@@ -18,6 +18,9 @@ body{
     background-color: var(--white);
     font-family: 'Barlow Condensed', sans-serif;
 }
+.header-container--categories{
+    background: linear-gradient(180deg, rgba(122, 197, 229, 0.5) 0%, rgba(238, 204, 117, 0) 72.92%);
+}
 .header-container--long{
     background-image: url('https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ksBQ4oHQDdJwND8H90ay8CbMihU.jpg');
     height: 580px;
@@ -27,11 +30,15 @@ body{
     position: fixed;
     top: 0;
 }
+.fa-arrow-left{
+    color: var(--blue);
+}
 .header-return{
     color: var(--blue-dark);
-    font-size: 4.8rem;
+    font-size: 2.8rem;
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 50px;
+    margin-bottom: 30px;
     margin-left: 20px;
     cursor: pointer;
 }
@@ -72,6 +79,18 @@ span .gg-search{
 }
 span .gg-search:active{
     transform: translateY(-2px);
+}
+.header-container--category{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin-left: 20px;
+}
+.header-container--name{
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: var(--blue);
+    margin-left: 20px;
 }
 /* Tendencias */
 .conatiner-trends{
@@ -175,7 +194,7 @@ span .gg-search:active{
     width: 80%;
 
 }
-.fa{
+.fa-star{
     color: #f0dc58;
     margin-right: 5px;
 }
