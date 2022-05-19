@@ -9,20 +9,6 @@
     --blue-ligth: #DBE2EF;
     --blue: #3F72AF;
     --blue-dark: #112D4E;
-    --purple-light-1: #FBFAFB;
-    --purple-light-2: #EEEAF2;
-    --purple-medium-1: #AA83C8;
-    --purple-medium-2: #8B48BF;
-    --purple-medium-3: #5C218A;
-    --purple-dark-1: #3E0F64;
-    --purple-dark-2: #2A0646;
-
-    --yellow: #EECC75;
-    --green: #CAD297;
-    --aqua: #B7EAC5;
-    --lightBlue: #A2EEE5;
-    --darkBlue: #8EA2EA;
-    --red: #F09D9D;
 }
 
 html{
@@ -42,7 +28,7 @@ body{
     top: 0;
 }
 .header-return{
-    color: var(--white);
+    color: var(--blue-dark);
     font-size: 4.8rem;
     display: inline-block;
     margin-top: 20px;
@@ -97,7 +83,7 @@ span .gg-search:active{
     color:var(--blue);
     font-size: 2.3rem;
 }
-.button-seemore{
+.button-seemore ,.movieList-button--seemore{
     width: 80px;
     height: 30px;
     border-radius: 8px ;
@@ -105,10 +91,12 @@ span .gg-search:active{
     border: none;
     color: var(--white);
     background-color: var(--blue);
-    margin-left: calc(20%);
     cursor: pointer;
 }
-.button-seemore:active{
+.button-seemore{
+    margin-left: calc(20%);
+}
+.button-seemore:active, .movieList-button--seemore:active{
     transform: translateY(-2px);
 }
 .container-header{
@@ -205,13 +193,29 @@ span .gg-search:active{
 .movieDetail-subtitle-similar{
     margin-bottom: 20px;
 }
+.container-list{
+    width: 80%;
+    height: auto;
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.container-img--list{
+    width: 150px;
+    height: 225px;
+    margin: 10px;
+}
+.movieList-button{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
 /* Footer */
 .footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    bottom: 0;
     height: 48px;
     width: 100%;
     background-color: var(--blue-dark);
