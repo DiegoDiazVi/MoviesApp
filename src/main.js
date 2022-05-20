@@ -10,7 +10,7 @@ const api = axios.create({
     },
 });
 
-const getTrendingMoviesPreview = async () =>{
+export const getTrendingMoviesPreview = async () =>{
     try {
         
         // using fetch
@@ -41,7 +41,7 @@ const getTrendingMoviesPreview = async () =>{
     }
 }
 
-const getCategoriesPreview = async () => {
+export const getCategoriesPreview = async () => {
     try {
 
         //Using fetch
@@ -74,6 +74,3 @@ const getCategoriesPreview = async () => {
         console.log(error)
     }
 }
-
-getTrendingMoviesPreview();
-getCategoriesPreview();
