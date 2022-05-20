@@ -1,5 +1,5 @@
-import {  getTrendingMoviesPreview, getCategoriesPreview } from "./main.js";
-import {headerContainerHomeTitle, containerHome, conatinerHomeCategories, headerContainerMovieDetail, MovieDetailList, headerColor, headerContainerHomeSearch, MovieDetailReturn, movieList, headerContainerTitle, btnSearch, btnReturn, btnSeemore } from './nodes.js';
+import {  getTrendingMoviesPreview, getCategoriesPreview, getMoviesByCategory } from "./main.js";
+import {headerContainerHomeTitle, containerHome, conatinerHomeCategories, headerContainerMovieDetail, MovieDetailList, headerColor, headerContainerHomeSearch, MovieDetailReturn, movieList, headerContainerTitle, btnSearch, btnReturn, btnSeemore, titleCategory } from './nodes.js';
 
 
 const searchMovie = () => {
@@ -18,10 +18,11 @@ btnSeemore.addEventListener('click', goTrends);
 
 const navigator = () => {
 
-    location.hash.startsWith('#trends') ? trendsPage() : 
-    location.hash.startsWith('#search=')  ? searchPage() : 
-    location.hash.startsWith('#movie=') ? moviesPage() :
-    location.hash.startsWith('#category=') ? categoriesPage() : homePage();
+    location.hash.startsWith('#trends')     ? trendsPage() : 
+    location.hash.startsWith('#search=')    ? searchPage() : 
+    location.hash.startsWith('#movie=')     ? moviesPage() :
+    location.hash.startsWith('#category=')  ? categoriesPage() : 
+    homePage();
 }
 
 window.addEventListener('DOMContentLoaded', navigator, false);
@@ -42,6 +43,7 @@ const homePage = () => {
     MovieDetailList.classList.add('inactive');
     MovieDetailReturn.classList.add('inactive');
     movieList.classList.add('inactive');
+    headerContainerTitle.classList.add('inactive');
     //load
     getTrendingMoviesPreview();
     getCategoriesPreview();
@@ -62,6 +64,12 @@ const categoriesPage = () => {
     headerContainerMovieDetail.classList.add('inactive');
     headerContainerMovieDetail.style.background = '';
     MovieDetailList.classList.add('inactive');
+    
+    const [categoryHash, categoryData] = location.hash.split('=');
+    const [categoryId, categoryName] = categoryData.split('-');
+
+    titleCategory.innerHTML = categoryName;
+    getMoviesByCategory(categoryId);
 }
 const moviesPage = () => {
     console.log('MOVIE');

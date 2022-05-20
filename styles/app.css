@@ -190,6 +190,7 @@ span .gg-search:active{
     font-size: 1.6rem;
     margin-left: 10px;
     color: var(--blue);
+    cursor: pointer;
 }
 #id28 { background-color: var(--yellow); }
 #id12 { background-color: var(--red); }
