@@ -1,19 +1,27 @@
 import {  getTrendingMoviesPreview, getCategoriesPreview } from "./main.js";
-import {headerContainerHomeTitle, containerHome, conatinerHomeCategories, headerContainerMovieDetail, MovieDetailList, headerColor, headerContainerHomeSearch, MovieDetailReturn, movieList, headerContainerTitle } from './nodes.js';
+import {headerContainerHomeTitle, containerHome, conatinerHomeCategories, headerContainerMovieDetail, MovieDetailList, headerColor, headerContainerHomeSearch, MovieDetailReturn, movieList, headerContainerTitle, btnSearch, btnReturn, btnSeemore } from './nodes.js';
+
+
+const searchMovie = () => {
+    location.hash = '#search=';
+}
+const returnHome = () => {
+    location.hash = '#home'
+}
+const goTrends = () => {
+    location.hash = '#trends'
+}
+
+btnSearch.addEventListener('click', searchMovie);
+btnReturn.addEventListener('click', returnHome);
+btnSeemore.addEventListener('click', goTrends);
 
 const navigator = () => {
-    console.log({ location });
-    if (location.hash.startsWith('#trends')) {
-        trendsPage();
-    } else if (location.hash.startsWith('#search=')) {
-        searchPage();
-    } else if (location.hash.startsWith('#movie=')) {
-        moviesPage();
-    } else if (location.hash.startsWith('#category=')) {
-        categoriesPage();
-    } else {
-        homePage();
-    }
+
+    location.hash.startsWith('#trends') ? trendsPage() : 
+    location.hash.startsWith('#search=')  ? searchPage() : 
+    location.hash.startsWith('#movie=') ? moviesPage() :
+    location.hash.startsWith('#category=') ? categoriesPage() : homePage();
 }
 
 window.addEventListener('DOMContentLoaded', navigator, false);
@@ -90,17 +98,18 @@ const searchPage = () => {
 }
 const trendsPage = () => {
     console.log('TRENDS');
-    //home
-    headerContainerHomeTitle.classList.remove('inactive');
-    headerContainerHomeSearch.classList.remove('inactive');
-    containerHome.classList.remove('inactive');
-    conatinerHomeCategories.classList.remove('inactive');
-    headerContainerHomeSearch.classList.remove('inactive');
-    //another pages
-    headerColor.classList.remove('header-container--categories');
-    headerContainerMovieDetail.classList.add('inactive');
-    headerContainerMovieDetail.style.background = '';
-    MovieDetailList.classList.add('inactive');
-    MovieDetailReturn.classList.add('inactive');
-    movieList.classList.add('inactive');
+        //Categorias
+        headerColor.classList.add('header-container--categories');
+        MovieDetailReturn.classList.remove('inactive');
+        movieList.classList.remove('inactive');
+        headerContainerTitle.classList.remove('inactive');
+        //another pages
+        headerContainerHomeTitle.classList.add('inactive');
+        headerContainerHomeSearch.classList.add('inactive');
+        containerHome.classList.add('inactive');
+        conatinerHomeCategories.classList.add('inactive');
+        headerContainerHomeSearch.classList.add('inactive');
+        headerContainerMovieDetail.classList.add('inactive');
+        headerContainerMovieDetail.style.background = '';
+        MovieDetailList.classList.add('inactive');
 }
