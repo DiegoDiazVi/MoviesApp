@@ -1,10 +1,27 @@
 import { API_KEY } from "./secrets.js";
 
+const api = axios.create({
+    baseURL:'https://api.themoviedb.org/3',
+    Headers: {
+        'Content-Type' : 'application/json;charset=utf-8'
+    },
+    params: {
+        'api_key': API_KEY,
+    },
+});
+
 const getTrendingMoviesPreview = async () =>{
     try {
-        const response = await fetch (`https://api.themoviedb.org/3/trending/movie/day?api_key=${API_KEY}`)
+        
+        // using fetch
+        /*const response = await fetch (`https://api.themoviedb.org/3/trending/movie/day?api_key=${API_KEY}`)
         const data = await response.json();
-        const movies = data.results;
+        */
+        
+       //Using Axios
+        const { data } = await api ('/trending/movie/day');
+        const movies = data.results
+
         const movieImgArticle = document.querySelector('#trendingPreview .container-carrousel');
         const fragment = new DocumentFragment();
         movies.map(movie => {
@@ -26,10 +43,15 @@ const getTrendingMoviesPreview = async () =>{
 
 const getCategoriesPreview = async () => {
     try {
-        const response = await fetch (`https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}`)
-        const data = await response.json();
-        console.log(data);
+
+        //Using fetch
+        /*const response = await fetch (`https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}`)
+        const data = await response.json(); */
+
+        //using Axios
+        const { data } = await api('/genre/movie/list')
         const genres = data.genres;
+
         const fragment = new DocumentFragment();
         const genreArticle = document.querySelector('#categoriesPreview .container-subcategories');
         genres.map(genre =>{
