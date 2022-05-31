@@ -137,3 +137,27 @@ export const getNameMovies = async (nameMovie) => {
         console.log(error);
     }
 }
+
+export const getTrendingMoviesPage = async () =>{
+    try {
+        const { data } = await api ('/trending/movie/day');
+        const trendingMovies = data.results
+        const movieImgArticle = document.querySelector('.movieList-container  .container-list');
+        const fragment = new DocumentFragment();
+        movieImgArticle.innerHTML = '';
+        trendingMovies.map( trendingMovie => {
+            const movieContainer = document.createElement('figure');
+            movieContainer.classList.add('container-img--list');
+            const movieImg = document.createElement('img');
+            movieImg.classList.add('images');
+            movieImg.setAttribute('alt', trendingMovie.title);
+            movieImg.setAttribute('src','https://www.themoviedb.org/t/p/w300'+ trendingMovie.poster_path);
+    
+            movieContainer.appendChild(movieImg);
+            fragment.appendChild(movieContainer);
+        })
+        movieImgArticle.appendChild(fragment);
+    } catch (error) {
+        console.log(error);
+    }
+}

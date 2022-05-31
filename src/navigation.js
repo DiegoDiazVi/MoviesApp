@@ -1,4 +1,4 @@
-import {  getTrendingMoviesPreview, getCategoriesPreview, getMoviesByCategory, getNameMovies } from "./main.js";
+import {  getTrendingMoviesPreview, getCategoriesPreview, getMoviesByCategory, getNameMovies, getTrendingMoviesPage } from "./main.js";
 import {headerContainerHomeTitle, containerHome, conatinerHomeCategories, headerContainerMovieDetail, MovieDetailList, headerColor, headerContainerHomeSearch, MovieDetailReturn, movieList, headerContainerTitle, btnSearch, btnReturn, btnSeemore, titleCategory, inputSearch } from './nodes.js';
 
 
@@ -112,18 +112,20 @@ const searchPage = () => {
 }
 const trendsPage = () => {
     console.log('TRENDS');
-        //Categorias
-        headerColor.classList.add('header-container--categories');
-        MovieDetailReturn.classList.remove('inactive');
-        movieList.classList.remove('inactive');
-        headerContainerTitle.classList.remove('inactive');
-        //another pages
-        headerContainerHomeTitle.classList.add('inactive');
-        headerContainerHomeSearch.classList.add('inactive');
-        containerHome.classList.add('inactive');
-        conatinerHomeCategories.classList.add('inactive');
-        headerContainerHomeSearch.classList.add('inactive');
-        headerContainerMovieDetail.classList.add('inactive');
-        headerContainerMovieDetail.style.background = '';
-        MovieDetailList.classList.add('inactive');
+    //Categorias
+    headerColor.classList.add('header-container--categories');
+    MovieDetailReturn.classList.remove('inactive');
+    movieList.classList.remove('inactive');
+    headerContainerTitle.classList.remove('inactive');
+    titleCategory.innerHTML = 'Tendencias'
+    //another pages
+    headerContainerHomeTitle.classList.add('inactive');
+    headerContainerHomeSearch.classList.add('inactive');
+    containerHome.classList.add('inactive');
+    conatinerHomeCategories.classList.add('inactive');
+    headerContainerHomeSearch.classList.add('inactive');
+    headerContainerMovieDetail.classList.add('inactive');
+    headerContainerMovieDetail.style.background = '';
+    MovieDetailList.classList.add('inactive');
+    getTrendingMoviesPage();
 }
