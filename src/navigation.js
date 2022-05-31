@@ -23,6 +23,9 @@ const navigator = () => {
     location.hash.startsWith('#movie=')     ? moviesPage() :
     location.hash.startsWith('#category=')  ? categoriesPage() : 
     homePage();
+
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
 
 window.addEventListener('DOMContentLoaded', navigator, false);
