@@ -1,9 +1,10 @@
-import {  getTrendingMoviesPreview, getCategoriesPreview, getMoviesByCategory } from "./main.js";
-import {headerContainerHomeTitle, containerHome, conatinerHomeCategories, headerContainerMovieDetail, MovieDetailList, headerColor, headerContainerHomeSearch, MovieDetailReturn, movieList, headerContainerTitle, btnSearch, btnReturn, btnSeemore, titleCategory } from './nodes.js';
+import {  getTrendingMoviesPreview, getCategoriesPreview, getMoviesByCategory, getNameMovies } from "./main.js";
+import {headerContainerHomeTitle, containerHome, conatinerHomeCategories, headerContainerMovieDetail, MovieDetailList, headerColor, headerContainerHomeSearch, MovieDetailReturn, movieList, headerContainerTitle, btnSearch, btnReturn, btnSeemore, titleCategory, inputSearch } from './nodes.js';
 
 
 const searchMovie = () => {
-    location.hash = '#search=';
+    
+    location.hash = `#search=${inputSearch.value}`;
 }
 const returnHome = () => {
     location.hash = '#home'
@@ -106,6 +107,8 @@ const searchPage = () => {
     headerContainerMovieDetail.classList.add('inactive');
     headerContainerMovieDetail.style.background = '';
     MovieDetailList.classList.add('inactive');
+    const [_, nameMovie] = location.hash.split('=');
+    getNameMovies(nameMovie);
 }
 const trendsPage = () => {
     console.log('TRENDS');

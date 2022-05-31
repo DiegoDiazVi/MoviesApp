@@ -105,6 +105,35 @@ export const getMoviesByCategory = async (id) =>{
         })
         categoryImgArticle.appendChild(fragment);
     } catch (error) {
-        
+        console.log(error);
+    }
+}
+
+export const getNameMovies = async (nameMovie) => {
+    try {
+        const { data } = await api('/search/movie', {
+            params: {
+                query: nameMovie,
+            }
+        })
+        const movies = data.results;
+        console.log(movies);
+        const movieImgArticle = document.querySelector('.movieList-container  .container-list');
+        const fragment = new DocumentFragment();
+        movieImgArticle.innerHTML = '';
+        movies.map( movie => {
+            const movieContainer = document.createElement('figure');
+            movieContainer.classList.add('container-img--list');
+            const movieImg = document.createElement('img');
+            movieImg.classList.add('images');
+            movieImg.setAttribute('alt', movie.title);
+            movieImg.setAttribute('src','https://www.themoviedb.org/t/p/w300'+ movie.poster_path);
+    
+            movieContainer.appendChild(movieImg);
+            fragment.appendChild(movieContainer);
+        })
+        movieImgArticle.appendChild(fragment);
+    } catch (error) {
+        console.log(error);
     }
 }

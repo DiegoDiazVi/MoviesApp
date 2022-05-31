@@ -20,10 +20,11 @@ const titleCategory = document.querySelector('.header-container--name');
 //barra de busqueda
 const headerContainerHomeSearch = document.querySelector('.container-search');
 const btnSearch = document.querySelector('#btn-search');
+const inputSearch = document.querySelector('.input-search');
 //boton return
 const MovieDetailReturn = document.querySelector('.header-return');
 const btnReturn = document.querySelector('#btn-return');
 //lista de peliculas
 const movieList = document.querySelector('.movieList-container');
 
-export {headerContainerHomeTitle, containerHome, conatinerHomeCategories, headerContainerMovieDetail, MovieDetailList, headerColor, headerContainerHomeSearch, MovieDetailReturn, movieList, headerContainerTitle, btnSearch, btnReturn, btnSeemore, titleCategory};
+export {headerContainerHomeTitle, containerHome, conatinerHomeCategories, headerContainerMovieDetail, MovieDetailList, headerColor, headerContainerHomeSearch, MovieDetailReturn, movieList, headerContainerTitle, btnSearch, btnReturn, btnSeemore, titleCategory, inputSearch};
